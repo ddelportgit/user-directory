@@ -1,6 +1,7 @@
 const userList = document.querySelector("#userList");
 const searchInput = document.querySelector("#searchInput");
 let users = [];
+const userCount = document.querySelector("#userCount");
 
 function displayUsers(userArray) {
   userList.innerHTML = "";
