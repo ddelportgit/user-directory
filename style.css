@@ -67,3 +67,9 @@ h1 {
   outline: 2px solid #a78bfa;
   outline-offset: 3px;
 }
+
+#userCount {
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+  color: #a78bfa;
+}
