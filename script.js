@@ -12,6 +12,7 @@ function displayUsers(userArray) {
 
   userArray.forEach(function (user) {
     const userCard = document.createElement("div");
+    userCard.classList.add("userCard");
 
     userCard.innerHTML = `
       <h2>${user.name}</h2>
