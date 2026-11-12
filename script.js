@@ -6,7 +6,8 @@ let users = [];
 
 function displayUsers(userArray) {
   userList.innerHTML = "";
-  userCount.textContent = `Showing ${userArray.length} users`;
+  const userWord = userArray.length === 1 ? "user" : "users";
+  userCount.textContent = `Showing ${userArray.length} ${userWord}`;
 
   if (userArray.length === 0) {
     userList.textContent = "No users found.";
