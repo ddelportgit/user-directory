@@ -10,7 +10,13 @@ async function getUsers() {
 
     const users = await response.json();
 
-    console.log(users);
+    users.forEach(function (user) {
+      const userCard = document.createElement("div");
+
+      userCard.textContent = user.name;
+
+      userList.appendChild(userCard);
+    });
   } catch (error) {
     console.log(error.message);
   }
