@@ -24,6 +24,7 @@ async function getUsers() {
       userList.appendChild(userCard);
     });
   } catch (error) {
+    userList.textContent = "Unable to load users. Please try again.";
     console.log(error.message);
   }
 }
