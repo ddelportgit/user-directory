@@ -1,4 +1,5 @@
 const userList = document.querySelector("#userList");
+const searchInput = document.querySelector("#searchInput");
 
 async function getUsers() {
   userList.textContent = "Loading users...";
