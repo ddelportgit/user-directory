@@ -5,6 +5,11 @@ let users = [];
 function displayUsers(userArray) {
   userList.innerHTML = "";
 
+  if (userArray.length === 0) {
+    userList.textContent = "No users found.";
+    return;
+  }
+
   userArray.forEach(function (user) {
     const userCard = document.createElement("div");
 
