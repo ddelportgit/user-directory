@@ -55,7 +55,8 @@ searchInput.addEventListener("input", function () {
   const filteredUsers = users.filter(function (user) {
     return (
       user.name.toLowerCase().includes(searchTerm) ||
-      user.email.toLowerCase().includes(searchTerm)
+      user.email.toLowerCase().includes(searchTerm) ||
+      user.address.city.toLowerCase().includes(searchTerm)
     );
   });
 
