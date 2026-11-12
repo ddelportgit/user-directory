@@ -74,3 +74,11 @@ h1 {
   color: #a78bfa;
   font-size: 0.9rem;
 }
+
+label[for="searchInput"] {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto 0.5rem;
+  color: #a78bfa;
+  font-size: 0.9rem;
+}
