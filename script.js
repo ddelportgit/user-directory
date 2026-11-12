@@ -1,5 +1,6 @@
 const userList = document.querySelector("#userList");
 const searchInput = document.querySelector("#searchInput");
+let users = [];
 
 async function getUsers() {
   userList.textContent = "Loading users...";
@@ -11,7 +12,7 @@ async function getUsers() {
       throw new Error("Failed to fetch users");
     }
 
-    const users = await response.json();
+    users = await response.json();
 
     users.forEach(function (user) {
       const userCard = document.createElement("div");
