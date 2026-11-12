@@ -18,11 +18,18 @@ function displayUsers(userArray) {
     const userCard = document.createElement("div");
     userCard.classList.add("userCard");
 
-    userCard.innerHTML = `
-      <h2>${user.name}</h2>
-      <p>${user.email}</p>
-      <p>${user.address.city}</p>
-    `;
+    const name = document.createElement("h2");
+    name.textContent = user.name;
+
+    const email = document.createElement("p");
+    email.textContent = user.email;
+
+    const city = document.createElement("p");
+    city.textContent = user.address.city;
+
+    userCard.appendChild(name);
+    userCard.appendChild(email);
+    userCard.appendChild(city);
 
     userList.appendChild(userCard);
   });
