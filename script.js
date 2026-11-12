@@ -1,10 +1,12 @@
 const userList = document.querySelector("#userList");
 const searchInput = document.querySelector("#searchInput");
-let users = [];
 const userCount = document.querySelector("#userCount");
+
+let users = [];
 
 function displayUsers(userArray) {
   userList.innerHTML = "";
+  userCount.textContent = `Showing ${userArray.length} users`;
 
   if (userArray.length === 0) {
     userList.textContent = "No users found.";
