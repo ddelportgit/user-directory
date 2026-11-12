@@ -13,7 +13,11 @@ async function getUsers() {
     users.forEach(function (user) {
       const userCard = document.createElement("div");
 
-      userCard.textContent = user.name;
+      userCard.innerHTML = `
+        <h2>${user.name}</h2>
+        <p>${user.email}</p>
+        <p>${user.address.city}</p>
+      `;
 
       userList.appendChild(userCard);
     });
