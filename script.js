@@ -2,6 +2,22 @@ const userList = document.querySelector("#userList");
 const searchInput = document.querySelector("#searchInput");
 let users = [];
 
+function displayUsers(userArray) {
+  userList.innerHTML = "";
+
+  userArray.forEach(function (user) {
+    const userCard = document.createElement("div");
+
+    userCard.innerHTML = `
+      <h2>${user.name}</h2>
+      <p>${user.email}</p>
+      <p>${user.address.city}</p>
+    `;
+
+    userList.appendChild(userCard);
+  });
+}
+
 async function getUsers() {
   userList.textContent = "Loading users...";
 
@@ -14,17 +30,7 @@ async function getUsers() {
 
     users = await response.json();
 
-    users.forEach(function (user) {
-      const userCard = document.createElement("div");
-
-      userCard.innerHTML = `
-        <h2>${user.name}</h2>
-        <p>${user.email}</p>
-        <p>${user.address.city}</p>
-      `;
-
-      userList.appendChild(userCard);
-    });
+    displayUsers(users);
   } catch (error) {
     userList.textContent = "Unable to load users. Please try again.";
     console.log(error.message);
